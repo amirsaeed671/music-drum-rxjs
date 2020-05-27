@@ -1,0 +1,27 @@
+{
+  "name": "music-drum-rxjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirsaeed671/music-drum-rxjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirsaeed671/music-drum-rxjs/issues"
+  },
+  "homepage": "https://github.com/amirsaeed671/music-drum-rxjs#readme",
+  "dependencies": {
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
