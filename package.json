@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.js",
-    "deploy": "npm run build && git commit -am 'latest build' && git push origin master"
+    "start": "parcel src/index.html --out-dir docs",
+    "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "deploy": "npm run build && git add . && git commit -m 'latest build' && git push origin master"
   },
   "repository": {
     "type": "git",
