@@ -14914,20 +14914,16 @@ var _operators = require("rxjs/operators");
 
 var button$ = (0, _rxjs.fromEvent)(document, 'keydown');
 var transformed$ = button$.pipe((0, _operators.pluck)("keyCode"), (0, _operators.map)(function (code) {
-  try {
-    var element = document.querySelector("div[data-key='".concat(code, "']")) || {};
-    var audio = document.querySelector("audio[data-key='".concat(code, "']")) || {};
-    element.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
-    return element;
-  } catch (error) {
-    return null;
-  }
-}), (0, _operators.delay)(70), (0, _operators.filter)(function (element) {
-  return !!element;
-}), (0, _operators.tap)(function (element) {
+  var element = document.querySelector("div[data-key='".concat(code, "']")) || {};
+  var audio = document.querySelector("audio[data-key='".concat(code, "']")) || {};
+  element.classList.add('playing');
+  audio.currentTime = 0;
+  audio.play();
+  return element;
+}), (0, _operators.delay)(70), (0, _operators.tap)(function (element) {
   element.classList.remove('playing');
+}), (0, _operators.catchError)(function () {
+  return transformed$;
 }));
 transformed$.subscribe();
 },{"rxjs":"../node_modules/rxjs/_esm5/index.js","rxjs/operators":"../node_modules/rxjs/_esm5/operators/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -14958,7 +14954,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54486" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59318" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
