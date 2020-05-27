@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "parcel watch index.html",
     "dev": "parcel index.html",
-    "build": "parcel index.js"
+    "build": "parcel build index.js",
+    "deploy": "npm run build && git commit -am 'latest build' && git push origin master"
   },
   "repository": {
     "type": "git",
